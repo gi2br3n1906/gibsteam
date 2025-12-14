@@ -36,7 +36,7 @@
     @if($article->image)
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
             <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl">
-                <img src="{{ $article->image }}" 
+                <img src="{{ asset('storage/' . $article->image) }}" 
                      alt="{{ $article->title }}" 
                      class="w-full h-full object-cover">
             </div>
