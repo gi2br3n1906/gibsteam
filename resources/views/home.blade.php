@@ -150,69 +150,46 @@
         </div>
 
         <!-- Articles Grid -->
-        <div class="grid md:grid-cols-3 gap-8">
-            
-            <!-- Article 1 -->
-            <article class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                <div class="p-6">
-                    <div class="text-sm text-primary-600 font-semibold mb-2">Dec 10, 2024</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-primary-600 transition-colors">
-                        <a href="#">Memulai dengan Laravel 11</a>
-                    </h3>
-                    <p class="text-gray-600 mb-4 leading-relaxed">
-                        Jelajahi fitur dan peningkatan baru di Laravel 11 serta cara memigrasikan proyek yang sudah ada.
-                    </p>
-                    <a href="#" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium group">
-                        Baca selengkapnya
-                        <svg class="ml-1 h-4 w-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                        </svg>
-                    </a>
-                </div>
-            </article>
-
-            <!-- Article 2 -->
-            <article class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                <div class="p-6">
-                    <div class="text-sm text-primary-600 font-semibold mb-2">Dec 5, 2024</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-primary-600 transition-colors">
-                        <a href="#">Praktik Terbaik Tailwind CSS</a>
-                    </h3>
-                    <p class="text-gray-600 mb-4 leading-relaxed">
-                        Pelajari cara menulis kode Tailwind CSS yang dapat dipelihara dan skalabel untuk aplikasi skala besar.
-                    </p>
-                    <a href="#" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium group">
-                        Baca selengkapnya
-                        <svg class="ml-1 h-4 w-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                        </svg>
-                    </a>
-                </div>
-            </article>
-
-            <!-- Article 3 -->
-            <article class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                <div class="p-6">
-                    <div class="text-sm text-primary-600 font-semibold mb-2">Nov 28, 2024</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-primary-600 transition-colors">
-                        <a href="#">Membangun RESTful API</a>
-                    </h3>
-                    <p class="text-gray-600 mb-4 leading-relaxed">
-                        Panduan komprehensif untuk merancang dan mengimplementasikan RESTful API yang robust dengan Laravel.
-                    </p>
-                    <a href="#" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium group">
-                        Baca selengkapnya
-                        <svg class="ml-1 h-4 w-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                        </svg>
-                    </a>
-                </div>
-            </article>
-        </div>
+        @if($latestArticles->isEmpty())
+            <div class="text-center py-12">
+                <p class="text-gray-500 text-lg">Belum ada artikel yang dipublikasikan.</p>
+            </div>
+        @else
+            <div class="grid md:grid-cols-3 gap-8">
+                @foreach($latestArticles as $article)
+                    <article class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                        @if($article->image)
+                            <div class="aspect-video overflow-hidden bg-gray-100">
+                                <img src="{{ asset('storage/' . $article->image) }}" 
+                                     alt="{{ $article->title }}" 
+                                     class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                            </div>
+                        @endif
+                        <div class="p-6">
+                            <div class="text-sm text-primary-600 font-semibold mb-2">
+                                {{ $article->published_at->format('M d, Y') }}
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-primary-600 transition-colors">
+                                <a href="{{ route('articles.show', $article->slug) }}">{{ $article->title }}</a>
+                            </h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed line-clamp-3">
+                                {{ $article->excerpt }}
+                            </p>
+                            <a href="{{ route('articles.show', $article->slug) }}" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium group">
+                                Baca selengkapnya
+                                <svg class="ml-1 h-4 w-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                @endforeach
+            </div>
+        @endif
 
         <!-- View All Link -->
         <div class="text-center mt-12">
-            <a href="{{ url('/articles') }}" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold text-lg group">
+            <a href="{{ route('articles.index') }}" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold text-lg group">
                 Lihat semua artikel
                 <svg class="ml-2 h-5 w-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
