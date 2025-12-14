@@ -32,7 +32,7 @@
                         <!-- Article Image -->
                         @if($article->image)
                             <div class="aspect-video overflow-hidden bg-gray-100">
-                                <img src="{{ $article->image }}" 
+                                <img src="{{ asset('storage/' . $article->image) }}" 
                                      alt="{{ $article->title }}" 
                                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                             </div>
