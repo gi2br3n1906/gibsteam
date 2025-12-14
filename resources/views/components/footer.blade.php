@@ -4,7 +4,7 @@
             
             <!-- Copyright -->
             <div class="text-sm text-gray-600">
-                © {{ date('Y') }} <span class="font-semibold text-gray-900">Gibran.dev</span>. All rights reserved.
+                © {{ date('Y') }} <span class="font-semibold text-gray-900">Gibran.dev</span>. Hak cipta dilindungi.
             </div>
 
             <!-- Social Media Icons -->

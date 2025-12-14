@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Home')
+@section('title', 'Beranda')
 
 @section('content')
 
@@ -14,34 +14,34 @@
                 <!-- Badge -->
                 <div class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-primary-50 to-blue-50 text-primary-700 rounded-full text-sm font-semibold border border-primary-100">
                     <span class="mr-2">🚀</span>
-                    3.80 GPA Informatics Student & Lab Assistant
+                    Mahasiswa Informatika IPK 3.80 & Asisten Laboratorium
                 </div>
 
                 <!-- Headline -->
                 <h1 class="text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight leading-tight">
-                    From <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-primary-600">Algorithms</span> to 
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-blue-600">Modern Web Solutions</span>
+                    Dari <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-primary-600">Algoritma</span> hingga 
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-blue-600">Solusi Web Modern</span>
                 </h1>
 
                 <!-- Sub-headline -->
                 <p class="text-xl text-gray-600 leading-relaxed max-w-2xl">
-                    Hi, I'm <span class="font-semibold text-gray-900">Gibran Ahmad Maulana</span>, an Informatics student at Universitas Diponegoro. 
-                    I bridge the gap between complex algorithmic thinking and elegant web development, combining deep CS fundamentals with modern full-stack expertise. 
-                    As a Lab Assistant teaching core systems and algorithms, I bring both technical depth and adaptability to every project.
+                    Halo, saya <span class="font-semibold text-gray-900">Gibran Ahmad Maulana</span>, mahasiswa Informatika di Universitas Diponegoro. 
+                    Saya menjembatani kesenjangan antara pemikiran algoritmik yang kompleks dan pengembangan web yang elegan, menggabungkan fondasi ilmu komputer yang mendalam dengan keahlian full-stack modern. 
+                    Sebagai Asisten Laboratorium yang mengajar sistem inti dan algoritma, saya membawa kedalaman teknis dan kemampuan beradaptasi ke setiap proyek.
                 </p>
 
                 <!-- CTA Buttons -->
                 <div class="flex flex-col sm:flex-row gap-4 pt-4">
                     <a href="{{ url('/projects') }}" 
                        class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-primary-600 hover:bg-primary-700 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200">
-                        View Projects
+                        Lihat Proyek
                         <svg class="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                         </svg>
                     </a>
                     <a href="{{ url('/articles') }}" 
                        class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-gray-700 bg-white hover:bg-gray-50 border-2 border-gray-200 hover:border-gray-300 rounded-xl shadow-sm hover:shadow-md transform hover:-translate-y-1 transition-all duration-200">
-                        Read Articles
+                        Baca Artikel
                     </a>
                 </div>
             </div>
@@ -68,9 +68,9 @@
     <div class="max-w-7xl mx-auto">
         <!-- Section Header -->
         <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">Proyek Unggulan</h2>
             <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                A selection of my recent work showcasing modern web development
+                Pilihan karya terbaru saya yang menampilkan pengembangan web modern
             </p>
         </div>
 
@@ -88,10 +88,10 @@
                 </div>
                 <div class="p-6">
                     <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors">
-                        E-Commerce Platform
+                        Platform E-Commerce
                     </h3>
                     <p class="text-gray-600 mb-4 leading-relaxed">
-                        A full-featured online store built with Laravel and Vue.js, featuring real-time inventory management and payment integration.
+                        Toko online lengkap yang dibangun dengan Laravel dan Vue.js, dilengkapi manajemen inventaris real-time dan integrasi pembayaran.
                     </p>
                     <div class="flex flex-wrap gap-2">
                         <span class="px-3 py-1 bg-red-50 text-red-700 text-sm font-medium rounded-lg">Laravel</span>
@@ -112,10 +112,10 @@
                 </div>
                 <div class="p-6">
                     <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors">
-                        Learning Management System
+                        Sistem Manajemen Pembelajaran
                     </h3>
                     <p class="text-gray-600 mb-4 leading-relaxed">
-                        An interactive platform for online courses with video streaming, quizzes, and progress tracking capabilities.
+                        Platform interaktif untuk kursus online dengan streaming video, kuis, dan kemampuan pelacakan progres.
                     </p>
                     <div class="flex flex-wrap gap-2">
                         <span class="px-3 py-1 bg-red-50 text-red-700 text-sm font-medium rounded-lg">Laravel</span>
@@ -129,7 +129,7 @@
         <!-- View All Link -->
         <div class="text-center mt-12">
             <a href="{{ url('/projects') }}" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold text-lg group">
-                View all projects
+                Lihat semua proyek
                 <svg class="ml-2 h-5 w-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
@@ -143,9 +143,9 @@
     <div class="max-w-7xl mx-auto">
         <!-- Section Header -->
         <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold text-gray-900 mb-4">Latest Articles</h2>
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">Artikel Terbaru</h2>
             <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                Thoughts on web development, tutorials, and tech insights
+                Pemikiran tentang pengembangan web, tutorial, dan wawasan teknologi
             </p>
         </div>
 
@@ -157,13 +157,13 @@
                 <div class="p-6">
                     <div class="text-sm text-primary-600 font-semibold mb-2">Dec 10, 2024</div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-primary-600 transition-colors">
-                        <a href="#">Getting Started with Laravel 11</a>
+                        <a href="#">Memulai dengan Laravel 11</a>
                     </h3>
                     <p class="text-gray-600 mb-4 leading-relaxed">
-                        Explore the new features and improvements in Laravel 11 and how to migrate your existing projects.
+                        Jelajahi fitur dan peningkatan baru di Laravel 11 serta cara memigrasikan proyek yang sudah ada.
                     </p>
                     <a href="#" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium group">
-                        Read more
+                        Baca selengkapnya
                         <svg class="ml-1 h-4 w-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                         </svg>
@@ -176,13 +176,13 @@
                 <div class="p-6">
                     <div class="text-sm text-primary-600 font-semibold mb-2">Dec 5, 2024</div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-primary-600 transition-colors">
-                        <a href="#">Tailwind CSS Best Practices</a>
+                        <a href="#">Praktik Terbaik Tailwind CSS</a>
                     </h3>
                     <p class="text-gray-600 mb-4 leading-relaxed">
-                        Learn how to write maintainable and scalable Tailwind CSS code for large-scale applications.
+                        Pelajari cara menulis kode Tailwind CSS yang dapat dipelihara dan skalabel untuk aplikasi skala besar.
                     </p>
                     <a href="#" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium group">
-                        Read more
+                        Baca selengkapnya
                         <svg class="ml-1 h-4 w-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                         </svg>
@@ -195,13 +195,13 @@
                 <div class="p-6">
                     <div class="text-sm text-primary-600 font-semibold mb-2">Nov 28, 2024</div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-primary-600 transition-colors">
-                        <a href="#">Building RESTful APIs</a>
+                        <a href="#">Membangun RESTful API</a>
                     </h3>
                     <p class="text-gray-600 mb-4 leading-relaxed">
-                        A comprehensive guide to designing and implementing robust RESTful APIs with Laravel.
+                        Panduan komprehensif untuk merancang dan mengimplementasikan RESTful API yang robust dengan Laravel.
                     </p>
                     <a href="#" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium group">
-                        Read more
+                        Baca selengkapnya
                         <svg class="ml-1 h-4 w-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                         </svg>
@@ -213,7 +213,7 @@
         <!-- View All Link -->
         <div class="text-center mt-12">
             <a href="{{ url('/articles') }}" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold text-lg group">
-                View all articles
+                Lihat semua artikel
                 <svg class="ml-2 h-5 w-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
@@ -225,7 +225,7 @@
 <!-- Tech Stack Marquee -->
 <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white border-t border-b border-gray-100 overflow-hidden">
     <div class="mb-8 text-center">
-        <h2 class="text-2xl font-bold text-gray-900">Technologies I Work With</h2>
+        <h2 class="text-2xl font-bold text-gray-900">Teknologi yang Saya Gunakan</h2>
     </div>
     
     <div class="relative">

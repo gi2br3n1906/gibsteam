@@ -16,22 +16,22 @@
             <!-- Desktop Menu -->
             <div class="hidden md:flex items-center space-x-1 lg:space-x-2">
                 <a href="{{ url('/') }}" class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-lg transition-all duration-200">
-                    Home
+                    Beranda
                 </a>
                 <a href="{{ url('/about') }}" class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-lg transition-all duration-200">
-                    About Me
+                    Tentang Saya
                 </a>
                 <a href="{{ url('/projects') }}" class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-lg transition-all duration-200">
-                    Projects
+                    Proyek
                 </a>
                 <a href="{{ url('/articles') }}" class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-lg transition-all duration-200">
-                    Articles
+                    Artikel
                 </a>
                 <a href="{{ url('/tech-stack') }}" class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-lg transition-all duration-200">
-                    Tech Stack
+                    Teknologi
                 </a>
                 <a href="{{ url('/contact') }}" class="ml-4 px-5 py-2.5 text-sm font-semibold text-white bg-primary-600 hover:bg-primary-700 rounded-lg shadow-sm hover:shadow-md transform hover:-translate-y-0.5 transition-all duration-200">
-                    Contact
+                    Kontak
                 </a>
             </div>
 
@@ -60,22 +60,22 @@
          class="md:hidden bg-white border-t border-gray-100 shadow-lg">
         <div class="px-4 pt-2 pb-4 space-y-1">
             <a href="{{ url('/') }}" class="block px-4 py-3 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-lg transition-colors duration-200">
-                Home
+                Beranda
             </a>
             <a href="{{ url('/about') }}" class="block px-4 py-3 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-lg transition-colors duration-200">
-                About Me
+                Tentang Saya
             </a>
             <a href="{{ url('/projects') }}" class="block px-4 py-3 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-lg transition-colors duration-200">
-                Projects
+                Proyek
             </a>
             <a href="{{ url('/articles') }}" class="block px-4 py-3 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-lg transition-colors duration-200">
-                Articles
+                Artikel
             </a>
             <a href="{{ url('/tech-stack') }}" class="block px-4 py-3 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-lg transition-colors duration-200">
-                Tech Stack
+                Teknologi
             </a>
             <a href="{{ url('/contact') }}" class="block mx-4 mt-4 px-4 py-3 text-center text-base font-semibold text-white bg-primary-600 hover:bg-primary-700 rounded-lg shadow-sm transition-colors duration-200">
-                Contact
+                Kontak
             </a>
         </div>
     </div>

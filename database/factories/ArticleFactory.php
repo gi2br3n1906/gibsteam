@@ -17,11 +17,11 @@ class ArticleFactory extends Factory
     public function definition(): array
     {
         $titles = [
-            'Getting Started with Laravel 11: A Complete Guide',
-            'Building Modern UIs with React and Tailwind CSS',
-            'Mastering Database Optimization in Laravel',
-            'The Future of Web Development: Trends to Watch',
-            'Creating RESTful APIs with Laravel Sanctum',
+            'Memulai dengan Laravel 11: Panduan Lengkap',
+            'Membangun UI Modern dengan React dan Tailwind CSS',
+            'Menguasai Optimasi Database di Laravel',
+            'Masa Depan Pengembangan Web: Tren yang Perlu Diperhatikan',
+            'Membuat RESTful API dengan Laravel Sanctum',
         ];
 
         $title = fake()->unique()->randomElement($titles);
@@ -42,52 +42,52 @@ class ArticleFactory extends Factory
     private function generateMarkdownContent(): string
     {
         return <<<'MARKDOWN'
-# Introduction
+# Pendahuluan
 
-Web development has evolved significantly over the past decade. Modern frameworks like **Laravel** and **React** have revolutionized how we build applications, making development faster, more secure, and more enjoyable.
+Pengembangan web telah berkembang pesat selama dekade terakhir. Framework modern seperti **Laravel** dan **React** telah merevolusi cara kita membangun aplikasi, membuat pengembangan lebih cepat, lebih aman, dan lebih menyenangkan.
 
-## Why Laravel?
+## Mengapa Laravel?
 
-Laravel is a powerful PHP framework that provides:
+Laravel adalah framework PHP yang powerful yang menyediakan:
 
-- **Elegant syntax** that makes code readable and maintainable
-- **Built-in authentication** and authorization systems
-- **Eloquent ORM** for database interactions
-- **Blade templating** engine for beautiful views
+- **Sintaks yang elegan** yang membuat kode mudah dibaca dan dipelihara
+- **Sistem autentikasi dan otorisasi bawaan**
+- **Eloquent ORM** untuk interaksi database
+- **Blade templating** engine untuk view yang indah
 
 ```php
-// Example: Creating a simple route
+// Contoh: Membuat route sederhana
 Route::get('/articles', [ArticleController::class, 'index']);
 ```
 
-## Modern Frontend Development
+## Pengembangan Frontend Modern
 
-The frontend landscape has changed dramatically with the introduction of component-based frameworks. React, Vue, and others have made it possible to build complex, interactive user interfaces with ease.
+Lanskap frontend telah berubah secara dramatis dengan diperkenalkannya framework berbasis komponen. React, Vue, dan lainnya telah memungkinkan kita membangun antarmuka pengguna yang kompleks dan interaktif dengan mudah.
 
-### Key Benefits
+### Manfaat Utama
 
-1. **Component Reusability** - Write once, use everywhere
-2. **Virtual DOM** - Faster rendering and better performance
-3. **Rich Ecosystem** - Thousands of packages and tools
-4. **Strong Community** - Active support and continuous improvements
+1. **Reusabilitas Komponen** - Tulis sekali, gunakan di mana saja
+2. **Virtual DOM** - Rendering lebih cepat dan performa lebih baik
+3. **Ekosistem yang Kaya** - Ribuan package dan tools
+4. **Komunitas yang Kuat** - Dukungan aktif dan peningkatan berkelanjutan
 
-## Best Practices
+## Praktik Terbaik
 
-When building modern web applications, consider these best practices:
+Saat membangun aplikasi web modern, pertimbangkan praktik terbaik berikut:
 
-- Use **version control** (Git) for all projects
-- Write **clean, documented code**
-- Implement **automated testing**
-- Follow **security best practices**
-- Optimize for **performance**
+- Gunakan **version control** (Git) untuk semua proyek
+- Tulis **kode yang bersih dan terdokumentasi**
+- Implementasikan **automated testing**
+- Ikuti **praktik keamanan terbaik**
+- Optimalkan untuk **performa**
 
-> "The best code is no code at all. Every line of code you write is a liability." - Jeff Atwood
+> "Kode terbaik adalah tidak ada kode sama sekali. Setiap baris kode yang Anda tulis adalah tanggung jawab." - Jeff Atwood
 
-## Conclusion
+## Kesimpulan
 
-Whether you're building a simple blog or a complex enterprise application, choosing the right tools and following best practices will set you up for success. Laravel and modern JavaScript frameworks provide an excellent foundation for any web project.
+Baik Anda membangun blog sederhana atau aplikasi enterprise yang kompleks, memilih tools yang tepat dan mengikuti praktik terbaik akan membuat Anda sukses. Laravel dan framework JavaScript modern menyediakan fondasi yang sangat baik untuk proyek web apa pun.
 
-Happy coding! 🚀
+Selamat coding! 🚀
 MARKDOWN;
     }
 }

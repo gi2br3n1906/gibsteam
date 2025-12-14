@@ -13,7 +13,7 @@
             <svg class="mr-2 h-5 w-5 transform group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>
-            Back to Articles
+            Kembali ke Artikel
         </a>
     </div>
 
@@ -72,11 +72,11 @@
                 <svg class="mr-2 h-5 w-5 transform group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                 </svg>
-                Back to Articles
+                Kembali ke Artikel
             </a>
             
             <div class="text-gray-600 text-sm">
-                Published on {{ $article->published_at->format('F d, Y') }}
+                Dipublikasikan pada {{ $article->published_at->format('F d, Y') }}
             </div>
         </div>
     </div>
