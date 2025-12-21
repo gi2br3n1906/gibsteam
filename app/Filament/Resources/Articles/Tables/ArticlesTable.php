@@ -18,7 +18,8 @@ class ArticlesTable
             ->columns([
                 ImageColumn::make('image')
                     ->circular()
-                    ->defaultImageUrl(url('/images/placeholder.png')),
+                    ->getStateUsing(fn ($record) => $record->image ? asset('storage/' . $record->image) : null)
+                    ->defaultImageUrl('https://placehold.co/100?text=No+Image'),
                 TextColumn::make('title')
                     ->searchable()
                     ->sortable()
